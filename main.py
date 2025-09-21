@@ -26,9 +26,10 @@ import nltk
 import spacy
 import subprocess
 import sys
-
+import spacy
 try:
-    nlp = spacy.load("en_core_web_sm")
+    nlp = spacy.load("./en_core_web_sm")  # local model path in repo
+
 except OSError:
     subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
     nlp = spacy.load("en_core_web_sm")
@@ -1620,3 +1621,4 @@ def render_company_dashboard():
 if __name__ == "__main__":
 
     main()
+
