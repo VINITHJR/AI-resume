@@ -36,3 +36,4 @@ python-Levenshtein
 
 python-dotenv
 pdfplumber
+spacy
