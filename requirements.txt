@@ -33,4 +33,6 @@ streamlit-lottie
 requests
 fuzzywuzzy
 python-Levenshtein
+
 python-dotenv
+pdfplumber
