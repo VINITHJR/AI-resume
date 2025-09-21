@@ -23,6 +23,16 @@ except ImportError:
 import pdfplumber
 import spacy
 import nltk
+import spacy
+import subprocess
+import sys
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")
+
 # --- Stub for analyze_resume (used in resume comparison) ---
 def analyze_resume(resume_filename, job_role):
     """Analyze a stored resume file against a job description.
@@ -1608,4 +1618,5 @@ def render_company_dashboard():
 # Application Entry Point
 # -----------------------------
 if __name__ == "__main__":
+
     main()
